@@ -24,16 +24,21 @@ function Herosection(props) {
     >
       <div className="container">
         <div className="intro">
-          <img src="images/avatar-1.svg" alt="Bolby" className="mb-4" />
+          <img
+            src="/profile.png"
+            alt="Imagen de perfil"
+            className="mb-4"
+            width="200"
+          />
 
-          <h1 className="mb-2 mt-0">Bolby Doe</h1>
+          <h1 className="mb-2 mt-0">Anthony Daniel Villegas</h1>
           <p>
-            I'm a{" "}
+            Soy{" "}
             <Typed
               strings={[
-                "UI/UX designer ",
-                "Front-End developer",
-                "Photography lover",
+                "Diseñador UI/UX",
+                "Desarrollador front-end",
+                "Amante de la fotografia y producción audiovisual",
               ]}
               typeSpeed={80}
               backSpeed={40}
@@ -46,30 +51,30 @@ function Herosection(props) {
 
           <ul className="social-icons light list-inline mb-0 mt-4">
             <li className="list-inline-item">
-              <a href="!#">
+              <a href="https://www.instagram.com/updavo/" target="_blank">
                 <i className="fab fa-instagram"></i>
               </a>
             </li>
             <li className="list-inline-item">
-              <a href="!#">
-                <i className="fab fa-twitter"></i>
+              <a href="https://www.linkedin.com/in/updavo">
+                <i className="fab fa-linkedin"></i>
               </a>
             </li>
-            <li className="list-inline-item">
+            {/* <li className="list-inline-item">
               <a href="!#">
                 <i className="fab fa-behance"></i>
               </a>
-            </li>
+            </li> */}
             <li className="list-inline-item">
-              <a href="!#">
-                <i className="fab fa-dribbble"></i>
+              <a href="https://github.com/UpDavo" target="_blank">
+                <i className="fab fa-github"></i>
               </a>
             </li>
-            <li className="list-inline-item">
+            {/* <li className="list-inline-item">
               <a href="!#">
                 <i className="fab fa-pinterest-p"></i>
               </a>
-            </li>
+            </li> */}
           </ul>
 
           <div className="mt-4">
@@ -80,7 +85,7 @@ function Herosection(props) {
               smooth={true}
               duration={500}
             >
-              Hire me
+              Click para acceder al formulario de contacto
             </Link>
           </div>
         </div>
@@ -93,7 +98,7 @@ function Herosection(props) {
             duration={500}
             className="mouse-wrapper"
           >
-            <span>Scroll Down</span>
+            <span>Deslice hacia abajo</span>
             <span className="mouse">
               <span className="wheel"></span>
             </span>

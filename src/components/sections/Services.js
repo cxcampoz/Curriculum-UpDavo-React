@@ -7,27 +7,27 @@ const servicesData = [
   {
     id: 1,
     icon: "images/service-1.svg",
-    title: "UI/UX design",
+    title: "Diseño UI/UX",
     content:
-      "Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.",
+      "Desarrollo de interfases que sean atractivas para los clientes y que a la vez mantengan la sencillez de una aplicación",
     color: "#6C6CE5",
     contentColor: "light",
   },
   {
     id: 2,
     icon: "images/service-2.svg",
-    title: "Web Development",
+    title: "Desarrollo Web",
     content:
-      "Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.",
+      "Desarrollo de todo tipo de aplicaciónes web que satisfagan las necesidades del cliente, rápido y eficiente",
     color: "#F9D74C",
     contentColor: "dark",
   },
   {
     id: 3,
     icon: "images/service-3.svg",
-    title: "Photography",
+    title: "Apis de Redes sociales",
     content:
-      "Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.",
+      "Desarrollo y control de campañas por redes sociales para el correcto manejo de clientes potenciales y automatización de emails",
     color: "#F97B8B",
     contentColor: "light",
   },
@@ -37,7 +37,7 @@ function Services() {
   return (
     <section id="services">
       <div className="container">
-        <Pagetitle title="Services" />
+        <Pagetitle title="Servicios" />
         <div className="row fix-spacing">
           {servicesData.map((service) => (
             <div className="col-md-4" key={service.id}>
@@ -47,7 +47,7 @@ function Services() {
         </div>
         <div className="mt-5 text-center">
           <p className="mb-0">
-            Looking for a custom job?{" "}
+            Busca un desarrollo en específico?{" "}
             <Link
               className="colorpink pointer"
               to="section-contact"
@@ -55,9 +55,9 @@ function Services() {
               smooth={true}
               duration={500}
             >
-              Click here
+              Click Aqui
             </Link>{" "}
-            to contact me! 👋
+            para contactarme! 👋
           </p>
         </div>
       </div>

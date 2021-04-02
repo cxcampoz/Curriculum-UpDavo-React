@@ -4,57 +4,87 @@ import Counter from "../elements/Counter";
 import Pagetitle from "../elements/Pagetitle";
 import Skill from "../elements/Skill";
 
+//Constante para la informacción inicial
 const aboutContent = {
-  name: "Bolby",
-  avatarImage: "/images/avatar-2.svg",
-  content:
-    "I am Bolby Doe, web developer from London, United Kingdom. I have rich experience in web site design and building and customization, also I am good at WordPress.",
+  name: "Anthony Villegas",
+  avatarImage: "/profile.png",
+  content: `Soy un Profesional en Ingeniería en Software, con amplias habilidades matemáticas, diseño de interfases basadas en la experiencia del usuario, 
+  redes y conocimientos en el área de programación web como: Entorno Javascript (JQuery, Frameworks como Next.JS basado en React, Node.js, Firebase, Apis), 
+  CSS (Bootstrap), Java, PHP (Laravel Básico) y Python; Además de tener un conocimiento adicional 
+  que complementa la gestión de cargos específicos (CRM, Facebook Ads Manager y su api para el control de leads, Email marketing HTML & Pixeles, flujo de ventas, análisis de datos, 
+    control de equipos de trabajo y tareas predefinidas para el equipo comerial).`,
 };
 
+//Constante para las barras de progreso
 const progressData = [
   {
     id: 1,
-    title: "Development",
-    percantage: 85,
-    progressColor: "#FFD15C",
+    title: "Trabajo en equipo",
+    percantage: 95,
+    progressColor: "#e56c78",
   },
   {
     id: 2,
-    title: "UI/UX Design",
+    title: "Desarrollo de interfases UX/UI",
     percantage: 95,
     progressColor: "#FF4C60",
   },
   {
     id: 3,
-    title: "Photography",
+    title: "Javascript & Node.JS",
+    percantage: 95,
+    progressColor: "#e5b96c",
+  },
+  {
+    id: 4,
+    title: "Web marketing tools",
+    percantage: 85,
+    progressColor: "#6cd3e5",
+  },
+  {
+    id: 5,
+    title: "Desarrollo Back-end",
     percantage: 70,
-    progressColor: "#6C6CE5",
+    progressColor: "#6ce5b7",
+  },
+  {
+    id: 6,
+    title: "Fotografía y Programas de edición",
+    percantage: 88,
+    progressColor: "#986ce5",
+  },
+  {
+    id: 7,
+    title: "Flutter para apps moviles",
+    percantage: 50,
+    progressColor: "#e5866c",
   },
 ];
 
+//Constante para el contador
 const counterData = [
   {
     id: 1,
-    title: "Projects completed",
-    count: 198,
+    title: "Proyecos Completados",
+    count: 25,
     icon: "icon-fire",
   },
   {
     id: 2,
-    title: "Cup of coffee",
-    count: 5670,
+    title: "Tazas de Cafe",
+    count: 3549,
     icon: "icon-cup",
   },
   {
     id: 3,
-    title: "Satisfied clients",
-    count: 427,
+    title: "Clientes Satisfechos",
+    count: 170,
     icon: "icon-people",
   },
   {
     id: 4,
-    title: "Nominees winner",
-    count: 35,
+    title: "Participación en Hackatones",
+    count: 3,
     icon: "icon-badge",
   },
 ];
@@ -63,7 +93,7 @@ function About() {
   return (
     <section id="about">
       <div className="container">
-        <Pagetitle title="About Me" />
+        <Pagetitle title="Acerca de mi" />
         <div className="row">
           <div className="col-md-3">
             <div className="text-center text-md-left">
@@ -76,10 +106,10 @@ function About() {
             <div className="rounded bg-white shadow-dark padding-30">
               <div className="row">
                 <div className="col-md-6">
-                  <p>{aboutContent.content}</p>
-                  <div className="mt-3">
+                  <p style={{ textAlign: "justify" }}>{aboutContent.content}</p>
+                  <div className="mt-4">
                     <a href="!#" className="btn btn-default">
-                      Download CV
+                      Descargar CV
                     </a>
                   </div>
                   <div
