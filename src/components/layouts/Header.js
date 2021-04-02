@@ -123,7 +123,7 @@ function Header({ light, logoSource, toggleMenu, headerToggler }) {
 
         <div className="footer">
           <span className="copyright">
-            &copy; {new Date().getFullYear()} Desarrollado por @UpDavo
+            &copy; {new Date().getFullYear()} @UpDavo
           </span>
         </div>
       </header>
