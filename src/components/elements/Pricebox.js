@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 function Pricebox({ priceboxItem }) {
   const { icon, title, content, price, badge, best } = priceboxItem;
@@ -19,11 +20,17 @@ function Pricebox({ priceboxItem }) {
       <h3 className="price">
         <em>$</em>
         {price}
-        <span>Month</span>
+        {price == "Cotizar" ? <span></span> : <span>App</span>}
       </h3>
-      <a href="!#" className="btn btn-default">
-        Get Started
-      </a>
+      <Link
+        className="btn btn-default"
+        to="section-contact"
+        spy={true}
+        smooth={true}
+        duration={500}
+      >
+        Conocer mas
+      </Link>
     </div>
   );
 }

@@ -12,6 +12,10 @@ import Pricing from "../components/sections/Pricing";
 import Services from "../components/sections/Services";
 import Testimonials from "../components/sections/Testimonials";
 import Works from "../components/sections/Works";
+import Instagram from "../components/sections/Instagram";
+// import Pdf from "react-to-pdf";
+
+// const ref = React.createRef();
 
 function Homepage() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -35,6 +39,10 @@ function Homepage() {
         headerToggler={headerToggler}
       />
       <main className={toggleMenu ? "content open" : "content"}>
+        {/* <Pdf targetRef={ref} filename="code-example.pdf">
+          {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
+        </Pdf>
+        <div ref={ref}> */}
         <Element name="section-home">
           <ReactCursorPosition>
             <Herosection />
@@ -52,6 +60,9 @@ function Homepage() {
         <Element name="section-works">
           <Works />
         </Element>
+        <Element name="section-instagram">
+          <Instagram />
+        </Element>
         <Element name="section-pricing">
           <Pricing />
         </Element>
@@ -61,12 +72,14 @@ function Homepage() {
         <Element name="section-brandlogos">
           <Brandlogos />
         </Element>
-        <Element name="section-blogs">
+        {/* <Element name="section-blogs">
           <Blogs />
-        </Element>
+        </Element> */}
         <Element name="section-contact">
           <Contact />
         </Element>
+        {/* </div> */}
+
         <div className="spacer" data-height="96"></div>
       </main>
     </>

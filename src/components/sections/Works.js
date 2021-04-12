@@ -6,124 +6,111 @@ import Portfolio from "../elements/Portfolio";
 const filters = [
   {
     id: 1,
-    text: "Everything",
+    text: "Todos los trabajos",
   },
   {
     id: 2,
-    text: "creative",
+    text: "Creativos",
   },
   {
     id: 3,
-    text: "art",
+    text: "Aplicaciónes Web",
   },
   {
     id: 4,
-    text: "design",
+    text: "Apis",
   },
   {
     id: 5,
-    text: "branding",
+    text: "Diseños / Hackatones",
   },
 ];
 
 const allData = [
   {
     id: 1,
-    title: "Project Managment Illustration",
-    category: "art",
-    image: "images/works/1.svg",
-    popupLink: ["images/works/1.svg"],
+    title: "Calendario para Profesores UEES",
+    category: "Aplicaciónes Web",
+    image: "images/works/01-01.jpg",
+    popupLink: ["images/works/01-01.jpg"],
   },
   {
     id: 2,
-    title: "Guest App Walkthrough Screens",
-    category: "creative",
-    image: "images/works/2.svg",
-    popupLink: [
-      "images/works/2.svg",
-      "images/works/5.svg",
-      "images/works/6.svg",
-    ],
+    title: "Generador de Emails con diplomas UEES",
+    category: "Aplicaciónes Web",
+    image: "images/works/01-02.jpg",
+    popupLink: ["images/works/01-02.jpg"],
   },
   {
     id: 3,
-    title: "Delivery App Wireframe",
-    category: "branding",
-    image: "images/works/3.svg",
-    popupLink: ["https://www.youtube.com/watch?v=qf9z4ulfmYw"],
+    title: "CRM y sus conexiones con IG/FB/LINKEDIN",
+    category: "Apis",
+    image: "images/works/01-03.jpg",
+    popupLink: ["images/works/01-03.jpg"],
   },
   {
     id: 4,
-    title: "Onboarding Motivation",
-    category: "creative",
-    image: "images/works/4.svg",
-    popupLink: [
-      "https://www.youtube.com/watch?v=URVHRhBSjj8",
-      "https://www.youtube.com/watch?v=qf9z4ulfmYw",
-    ],
+    title: "Mesa de Ayuda UEES",
+    category: "Aplicaciónes Web",
+    image: "images/works/01-04.jpg",
+    link: "https://www.uees.edu.ec/ayuda/ticket/",
   },
   {
     id: 5,
-    title: "iMac Mockup Design",
-    category: "art",
-    image: "images/works/5.svg",
-    popupLink: ["images/works/5.svg"],
+    title: "Api para el flujo de datos entre Redes sociales y CRM",
+    category: "Apis",
+    image: "images/works/01-05.jpg",
+    popupLink: ["images/works/01-05.jpg"],
   },
   {
     id: 6,
-    title: "Game Store App Concept",
-    category: "design",
-    image: "images/works/6.svg",
-    link: "https://dribbble.com",
+    title: "ShopAR - Aplicación AR para probar ropa",
+    category: "Creativos",
+    image: "images/works/01-06.jpg",
+    link: "https://github.com/UpDavo/ShopAR",
   },
   {
     id: 7,
-    title: "Project Managment Illustration",
-    category: "art",
-    image: "images/works/3.svg",
-    link: "https://pinterest.com",
+    title: "Manejo de CRM y Automatizaciónes de Registro CREAR",
+    category: "Apis",
+    image: "images/works/01-07.jpg",
+    popupLink: ["images/works/01-07.jpg"],
   },
   {
     id: 8,
-    title: "Guest App Walkthrough Screens",
-    category: "design",
-    image: "images/works/1.svg",
-    popupLink: ["images/works/1.svg"],
+    title: "Manejo de CRM y Automatizaciónes de Registro Ecomundo Vespertino",
+    category: "Apis",
+    image: "images/works/01-08.jpg",
+    popupLink: ["images/works/01-08.jpg"],
   },
   {
     id: 9,
-    title: "Delivery App Wireframe",
-    category: "branding",
-    image: "images/works/4.svg",
-    popupLink: ["images/works/4.svg"],
+    title: "Manejo de CRM y Automatizaciónes de Registro Thomas More",
+    category: "Apis",
+    image: "images/works/01-09.jpg",
+    popupLink: ["images/works/01-09.jpg"],
   },
   {
     id: 10,
-    title: "Game Store App Concept",
-    category: "design",
-    image: "images/works/6.svg",
-    link: "https://dribbble.com",
+    title: "Manejo de CRM y Automatizaciónes de Registro Ecomundo Matutino",
+    category: "Apis",
+    image: "images/works/01-10.jpg",
+    popupLink: ["images/works/01-10.jpg"],
   },
   {
     id: 11,
-    title: "Project Managment Illustration",
-    category: "art",
-    image: "images/works/3.svg",
-    link: "https://pinterest.com",
+    title:
+      "Automatizaciónes para Múltiples Procesos de Marketing",
+    category: "Apis",
+    image: "images/works/01-11.jpg",
+    popupLink: ["images/works/01-11.jpg"],
   },
   {
     id: 12,
-    title: "Guest App Walkthrough Screens",
-    category: "design",
-    image: "images/works/1.svg",
-    popupLink: ["images/works/1.svg"],
-  },
-  {
-    id: 13,
-    title: "Delivery App Wireframe",
-    category: "branding",
-    image: "images/works/4.svg",
-    popupLink: ["images/works/4.svg"],
+    title: "Aplicación de Cotizaciónes para La Costa Samborondón",
+    category: "Aplicaciónes Web",
+    image: "images/works/01-12.jpg",
+    popupLink: ["images/works/01-12.jpg"],
   },
 ];
 
@@ -179,7 +166,7 @@ function Works() {
   return (
     <section id="works">
       <div className="container">
-        <Pagetitle title="Recent Works" />
+        <Pagetitle title="Portafolio" />
         {/* Start Portfolio Filters */}
         <ScrollAnimation
           animateIn="fadeInUp"
@@ -222,10 +209,10 @@ function Works() {
             disabled={noMorePost ? "disabled" : null}
           >
             {noMorePost ? (
-              "No more items"
+              "No hay mas items"
             ) : (
               <span>
-                <i className="fas fa-spinner"></i> Load more
+                <i className="fas fa-spinner"></i> Cargar Mas
               </span>
             )}
           </button>

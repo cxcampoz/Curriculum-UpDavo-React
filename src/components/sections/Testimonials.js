@@ -6,28 +6,51 @@ import Testimonial from "../elements/Testimonial";
 const sliderData = [
   {
     id: 1,
-    avatar: "images/avatar-1.svg",
-    userName: "John Doe",
-    subtitle: "Product designer at Dribbble",
+    avatar: "images/people/profile-02.svg",
+    userName: "Sully Hurtado",
+    subtitle: "Salud S.A.",
     review:
-      "I enjoy working with the theme and learn so much. You guys make the process fun and interesting. Good luck! 👍",
+      "Es muy responsable, siempre realiza las tareas en los tiempos propuestos y tiene una grán habilidad matemática.",
   },
+
   {
     id: 2,
-    avatar: "images/avatar-2.svg",
-    userName: "John Doe",
-    subtitle: "Product designer at Dribbble",
-    review:
-      "I enjoy working with the theme and learn so much. You guys make the process fun and interesting. Good luck! 👍",
+    avatar: "images/people/profile-04.svg",
+    userName: "Ana Luisa Velez",
+    subtitle: "Jefa de Marketing UEES",
+    review: `
+      Me parece un gran profesional, sabe trabajar en equipo y es muy ordenado al momento de organizar tareas.
+  `,
   },
   {
     id: 3,
-    avatar: "images/avatar-3.svg",
-    userName: "John Doe",
-    subtitle: "Product designer at Dribbble",
-    review:
-      "I enjoy working with the theme and learn so much. You guys make the process fun and interesting. Good luck! 👍",
+    avatar: "images/people/profile-02.svg",
+    userName: "Lorena Ocaña",
+    subtitle: "Ex Gerente de Linde",
+    review: `
+     
+    Es una persona con una grán capacidad para afrontar situaciones de la manera mas óptima posible con resultados positivos.
+                
+  `,
   },
+  {
+    id: 4,
+    avatar: "images/people/profile-04.svg",
+    userName: "Lohana Lema",
+    subtitle: "Ciencias de la Computación UEES",
+    review: `
+      Es un estudiante muy aplicado, aparte de ser estudiante he tenido la oportunidad de trabajar con el y puedo decir que es un excelente profesional.
+  `,
+  },
+  // {
+  //   id: 3,
+  //   avatar: "images/people/profile-03.svg",
+  //   userName: "Andres del Pino",
+  //   subtitle: "Webmaster Universidad Espíritu Santo",
+  //   review: `
+
+  // `,
+  // },
 ];
 
 function Testimonials() {
@@ -43,7 +66,7 @@ function Testimonials() {
   return (
     <section id="testimonials">
       <div className="container">
-        <Pagetitle title="Clients & Review" />
+        <Pagetitle title="Referencias" />
         <Slider {...slidetSettings} className="testimonials-wrapper">
           {sliderData.map((slider) => (
             <Testimonial key={slider.id} slider={slider} />

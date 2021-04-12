@@ -99,12 +99,12 @@ function Header({ light, logoSource, toggleMenu, headerToggler }) {
             <li>
               <Link
                 activeClass="active"
-                to="section-blogs"
+                to="section-pricing"
                 spy={true}
                 smooth={true}
                 duration={500}
               >
-                <i className="icon-note"></i>Blog
+                <i className="icon-note"></i>Planes y Precios
               </Link>
             </li>
             <li>

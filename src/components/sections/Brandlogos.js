@@ -3,35 +3,36 @@ import React from "react";
 const brandlogoData = [
   {
     id: 1,
-    image: "images/client-1.svg",
+    image: "icons/dassadasddas-01.svg",
   },
   {
     id: 2,
-    image: "images/client-2.svg",
+    image: "icons/dassadasddas-02.svg",
   },
   {
     id: 3,
-    image: "images/client-3.svg",
+    image: "icons/dassadasddas-03.svg",
   },
+
   {
     id: 4,
-    image: "images/client-4.svg",
+    image: "icons/dassadasddas-08.svg",
   },
   {
     id: 5,
-    image: "images/client-5.svg",
+    image: "icons/dassadasddas-04.svg",
   },
   {
     id: 6,
-    image: "images/client-6.svg",
+    image: "icons/dassadasddas-05.svg",
   },
   {
     id: 7,
-    image: "images/client-7.svg",
+    image: "icons/dassadasddas-06.svg",
   },
   {
     id: 8,
-    image: "images/client-8.svg",
+    image: "icons/dassadasddas-07.svg",
   },
 ];
 

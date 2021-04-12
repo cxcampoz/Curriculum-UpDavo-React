@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import Pagetitle from "../elements/Pagetitle";
+import emailjs from "emailjs-com";
 
 function Contact() {
   const [formdata, setFormdata] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
+    nombre_interesado: "",
+    email_interesado: "",
+    titulo_correo: "",
+    mensaje: "",
   });
 
   const [error, setError] = useState(false);
@@ -15,21 +16,45 @@ function Contact() {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    if (!formdata.name) {
+    if (!formdata.nombre_interesado) {
       setError(true);
-      setMessage("Name is required");
-    } else if (!formdata.email) {
+      setMessage("El nombre es requerido");
+    } else if (!formdata.email_interesado) {
       setError(true);
-      setMessage("Email is required");
-    } else if (!formdata.subject) {
+      setMessage("El correo es requerido");
+    } else if (!formdata.titulo_correo) {
       setError(true);
-      setMessage("Subject is required");
-    } else if (!formdata.message) {
+      setMessage("El tema es requerido");
+    } else if (!formdata.mensaje) {
       setError(true);
-      setMessage("Message is required");
+      setMessage("El mensaje es requerido");
     } else {
       setError(false);
-      setMessage("You message has been sent!!!");
+      emailjs
+        .send(
+          "service_nqupn5i",
+          "template_promj7f",
+          {
+            titulo_correo: document.getElementById("InputSubject").value,
+            nombre_interesado: document.getElementById("InputName").value,
+            email_interesado: document.getElementById("InputEmail").value,
+            mensaje: document.getElementById("InputMessage").value,
+          },
+          "user_8cLLppVZdxPvIcYZAXJUw"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+      let formulario = document.getElementById("contact-form");
+      formulario.style.display = "none";
+      setMessage(
+        "Su mensaje ha sido enviado, será contestado lo más pronto posible"
+      );
     }
   };
 
@@ -53,7 +78,7 @@ function Contact() {
   return (
     <section id="contact">
       <div className="container">
-        <Pagetitle title="Get in Touch" />
+        <Pagetitle title="Contáctame" />
 
         <div className="row">
           <div className="col-md-4">
@@ -63,7 +88,10 @@ function Contact() {
                 animateOut="fadeInOut"
                 animateOnce={true}
               >
-                <h3>Let's talk about everything!</h3>
+                <h3>
+                  ¿Necesitas un servicio, aplicativo o cotización de algun
+                  trabajo en concreto?
+                </h3>
               </ScrollAnimation>
               <ScrollAnimation
                 animateIn="fadeInUp"
@@ -71,8 +99,8 @@ function Contact() {
                 animateOnce={true}
               >
                 <p>
-                  Don't like forms? Send me an{" "}
-                  <a href="mailto:name@example.com">email</a>. 👋
+                  Si no deseas escribirme por un formulario, envíame un{" "}
+                  <a href="mailto:updavo@heimdalec.com">email</a>. 👋
                 </p>
               </ScrollAnimation>
             </div>
@@ -90,11 +118,11 @@ function Contact() {
                     <input
                       type="text"
                       className="form-control"
-                      name="name"
+                      name="nombre_interesado"
                       id="InputName"
-                      placeholder="Your name"
+                      placeholder="Su nombre"
                       onChange={handleChange}
-                      value={formdata.name}
+                      value={formdata.nombre_interesado}
                     />
                   </div>
                 </div>
@@ -105,10 +133,10 @@ function Contact() {
                       type="email"
                       className="form-control"
                       id="InputEmail"
-                      name="email"
-                      placeholder="Email address"
+                      name="email_interesado"
+                      placeholder="Correo Electrónico"
                       onChange={handleChange}
-                      value={formdata.email}
+                      value={formdata.email_interesado}
                     />
                   </div>
                 </div>
@@ -119,10 +147,10 @@ function Contact() {
                       type="text"
                       className="form-control"
                       id="InputSubject"
-                      name="subject"
-                      placeholder="Subject"
+                      name="titulo_correo"
+                      placeholder="Título de la consulta"
                       onChange={handleChange}
-                      value={formdata.subject}
+                      value={formdata.titulo_correo}
                     />
                   </div>
                 </div>
@@ -130,13 +158,13 @@ function Contact() {
                 <div className="column col-md-12">
                   <div className="form-group">
                     <textarea
-                      name="message"
+                      name="mensaje"
                       id="InputMessage"
                       className="form-control"
                       rows="5"
-                      placeholder="Message"
+                      placeholder="Mensaje"
                       onChange={handleChange}
-                      value={formdata.message}
+                      value={formdata.mensaje}
                     ></textarea>
                   </div>
                 </div>
@@ -148,7 +176,7 @@ function Contact() {
                 value="Submit"
                 className="btn btn-default"
               >
-                Send Message
+                Enviar mensaje
               </button>
             </form>
             {handleAlerts()}

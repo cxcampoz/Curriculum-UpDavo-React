@@ -5,19 +5,20 @@ import Pricebox from "../elements/Pricebox";
 const priceboxData = [
   {
     id: 1,
-    title: "Basic",
+    title: "Basico",
     icon: "images/price-1.svg",
     content: [
       {
         id: 0,
-        text: "A Simple option but powerful to manage your business",
+        text:
+          "Opción simple pero eficiente que garantiza el exito de sus negocios (Páginas web Simples)",
       },
       {
         id: 2,
-        text: "Email support",
+        text: "Soporte vía Email/Videollamada",
       },
     ],
-    price: 9,
+    price: 399,
     best: false,
     badge: false,
   },
@@ -28,26 +29,31 @@ const priceboxData = [
     content: [
       {
         id: 1,
-        text: "Unlimited product including apps integrations and more features",
+        text:
+          "Producto con gran cantidad de soporte que incluye integraciones de aplicaciones y más funciones (Aplicaciónes Web)",
       },
       {
         id: 2,
-        text: "Mon-Fri support",
+        text: "Soporte de Lunes a Viernes",
       },
     ],
-    price: 49,
+    price: "500/899",
     best: true,
-    badge: "Recommended",
+    badge: "Recomendado",
   },
   {
     id: 3,
-    title: "Ultimate",
+    title: "Preferencial",
     icon: "images/price-3.svg",
     content: [
-      { id: 1, text: "A wise option for large companies and individuals" },
-      { id: 2, text: "24/7 support" },
+      {
+        id: 1,
+        text:
+          "Una sabia opción para grandes empresas y particulares que necesiten aplicaciónes complejas",
+      },
+      { id: 2, text: "Soporte las 24/7" },
     ],
-    price: 99,
+    price: "Cotizar",
     best: false,
     badge: false,
   },
@@ -57,7 +63,7 @@ function Pricing() {
   return (
     <section id="prices">
       <div className="container">
-        <Pagetitle title="Pricing Plans" />
+        <Pagetitle title="Planes y Precios" />
         <div className="row align-items-center">
           {priceboxData.map((pricebox) => (
             <div key={pricebox.id} className="col-md-4">
