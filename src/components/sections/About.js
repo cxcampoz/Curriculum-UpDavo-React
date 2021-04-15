@@ -27,7 +27,7 @@ const progressData = [
     id: 2,
     title: "Desarrollo de interfases UX/UI",
     percantage: 95,
-    progressColor: "#FF4C60",
+    progressColor: "#F40543",
   },
   {
     id: 3,
@@ -65,14 +65,14 @@ const progressData = [
 const counterData = [
   {
     id: 1,
-    title: "Proyecos Completados",
+    title: "Proyectos Completados",
     count: 25,
     icon: "icon-fire",
   },
   {
     id: 2,
     title: "Tazas de Cafe",
-    count: 3549,
+    count: 4130,
     icon: "icon-cup",
   },
   {
@@ -107,11 +107,11 @@ function About() {
               <div className="row">
                 <div className="col-md-6">
                   <p style={{ textAlign: "justify" }}>{aboutContent.content}</p>
-                  <div className="mt-4">
+                  {/* <div className="mt-4">
                     <a href="!#" className="btn btn-default">
                       Descargar CV
                     </a>
-                  </div>
+                  </div> */}
                   <div
                     className="spacer d-md-none d-lg-none"
                     data-height="30"

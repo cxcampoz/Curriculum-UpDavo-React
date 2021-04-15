@@ -60,9 +60,9 @@ function Homepage() {
         <Element name="section-works">
           <Works />
         </Element>
-        <Element name="section-instagram">
+        {/* <Element name="section-instagram">
           <Instagram />
-        </Element>
+        </Element> */}
         <Element name="section-pricing">
           <Pricing />
         </Element>
