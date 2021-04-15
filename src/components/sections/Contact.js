@@ -89,7 +89,7 @@ function Contact() {
                 animateOnce={true}
               >
                 <h3>
-                  ¿Necesitas un servicio, aplicativo o cotización de algun
+                  ¿Necesitas un servicio, aplicativo o cotización sobre un
                   trabajo en concreto?
                 </h3>
               </ScrollAnimation>
@@ -99,7 +99,7 @@ function Contact() {
                 animateOnce={true}
               >
                 <p>
-                  Si no deseas escribirme por un formulario, envíame un{" "}
+                  Si no deseas contactarme por un formulario, envíame un{" "}
                   <a href="mailto:updavo@heimdalec.com">email</a>. 👋
                 </p>
               </ScrollAnimation>
