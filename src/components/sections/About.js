@@ -107,11 +107,14 @@ function About() {
               <div className="row">
                 <div className="col-md-6">
                   <p style={{ textAlign: "justify" }}>{aboutContent.content}</p>
-                  {/* <div className="mt-4">
-                    <a href="!#" className="btn btn-default">
+                  <div className="mt-4">
+                    <a
+                      href="https://drive.google.com/file/d/1DMNYOoTdqPC2WbPLLn_ys8zMZOz4Fg6R/view?usp=sharing"
+                      className="btn btn-default"
+                    >
                       Descargar CV
                     </a>
-                  </div> */}
+                  </div>
                   <div
                     className="spacer d-md-none d-lg-none"
                     data-height="30"
